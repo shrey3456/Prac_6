@@ -27,27 +27,27 @@ jobs:
       
       - name: Install server dependencies
         run: |
-          cd server
+          cd backend
           npm install
       
       - name: Install client dependencies
         run: |
-          cd client
+          cd frontend
           npm install
       
       - name: Run server tests
         run: |
-          cd server
+          cd backend
           npm test
       
       - name: Run client tests
         run: |
-          cd client
+          cd frontend
           npm test
 
       - name: Build client
         run: |
-          cd client
+          cd frontend
           npm run build
       
       - name: Deploy to server
