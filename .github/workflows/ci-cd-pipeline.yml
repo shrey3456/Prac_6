@@ -9,8 +9,13 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - name: Set Git buffer size
+        run: git config --global http.postBuffer 524288000  # 500 MB
+      
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Fetch all history for all branches
       
       - name: Set up Node.js
         uses: actions/setup-node@v2
