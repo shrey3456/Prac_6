@@ -10,7 +10,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Set Git buffer size
-        shell: pwsh
         run: |
           git config --global http.postBuffer 524288000  # 500 MB
       
